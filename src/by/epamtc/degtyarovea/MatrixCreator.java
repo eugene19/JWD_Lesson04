@@ -73,7 +73,7 @@ public class MatrixCreator {
         return builder.toString();
     }
 
-    private static String matrixToString(double[][] matrix) {
+    public static String matrixToString(double[][] matrix) {
         if (matrix == null) {
             return null;
         }

@@ -203,13 +203,13 @@ public class MatrixCreator {
     public static int[][] createEvenMagic(int size) {
         int[][] matrix = fillMatrix(size);
 
-        rearrangementMainDiagonal(matrix);
-        rearrangementSecondaryDiagonal(matrix);
+        rearrangeMainDiagonal(matrix);
+        rearrangeSecondaryDiagonal(matrix);
 
         return matrix;
     }
 
-    private static void rearrangementSecondaryDiagonal(int[][] matrix) {
+    private static void rearrangeSecondaryDiagonal(int[][] matrix) {
         int count = 0;
 
         for (int i = 0; i < matrix.length / 2; i++) {
@@ -221,7 +221,7 @@ public class MatrixCreator {
         }
     }
 
-    private static void rearrangementMainDiagonal(int[][] matrix) {
+    private static void rearrangeMainDiagonal(int[][] matrix) {
         int count = 0;
 
         for (int i = 0; i < matrix.length / 2; i++) {

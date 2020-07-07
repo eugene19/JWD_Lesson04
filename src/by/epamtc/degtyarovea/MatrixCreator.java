@@ -1,7 +1,5 @@
 package by.epamtc.degtyarovea;
 
-import java.util.Arrays;
-
 public class MatrixCreator {
 
     public static void main(String[] args) {
@@ -57,34 +55,6 @@ public class MatrixCreator {
         }
 
         return array;
-    }
-
-    public static String matrixToString(int[][] matrix) {
-        if (matrix == null) {
-            return "Empty";
-        }
-        StringBuilder builder = new StringBuilder();
-
-        for (int[] row : matrix) {
-            builder.append(Arrays.toString(row))
-                    .append("\n");
-        }
-
-        return builder.toString();
-    }
-
-    public static String matrixToString(double[][] matrix) {
-        if (matrix == null) {
-            return null;
-        }
-        StringBuilder builder = new StringBuilder();
-
-        for (double[] row : matrix) {
-            builder.append(Arrays.toString(row))
-                    .append("\n");
-        }
-
-        return builder.toString();
     }
 
     public static int[][] createMatrixWithDiagonal(int size) {
@@ -244,5 +214,47 @@ public class MatrixCreator {
         }
 
         return matrix;
+    }
+
+    public static String matrixToString(int[][] matrix) {
+        if (matrix == null) {
+            return "Empty";
+        }
+        StringBuilder builder = new StringBuilder();
+
+        for (int[] row : matrix) {
+            for (int i = 0; i < row.length; i++) {
+                if (i != 0) {
+                    builder.append(", ")
+                            .append(row[i]);
+                } else {
+                    builder.append(row[i]);
+                }
+            }
+            builder.append("\n");
+        }
+
+        return builder.toString();
+    }
+
+    public static String matrixToString(double[][] matrix) {
+        if (matrix == null) {
+            return null;
+        }
+        StringBuilder builder = new StringBuilder();
+
+        for (double[] row : matrix) {
+            for (int i = 0; i < row.length; i++) {
+                if (i != 0) {
+                    builder.append(", ")
+                            .append(row[i]);
+                } else {
+                    builder.append(row[i]);
+                }
+            }
+            builder.append("\n");
+        }
+
+        return builder.toString();
     }
 }
